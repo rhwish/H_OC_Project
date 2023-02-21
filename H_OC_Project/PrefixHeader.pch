@@ -1,0 +1,37 @@
+//
+//  PrefixHeader.pch
+//  H_OC_Project
+//
+//  Created by RHFlower on 2023/2/21.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+/*
+ 新项目添加PCH:
+    1.创建新pch文件,默认名字即可: "PrefixHeader.pch".
+    2.点击下一步再去Build Settings 搜索Prefix Header.
+    3.找到Prefix Header并且双击,输入$(SRCROOT)/$(PROJECT_NAME)/PrefixHeader.pch
+*/
+
+#ifdef __OBJC__ // 只被object－c文件所引用
+
+#import "Environment.h" // 环境文件
+
+#import "HMacro.h" // 宏文件
+
+#import "HEnum.h" // 枚举文件
+
+#import <MyLayout/MyLayout.h> // 布局库
+
+// common model
+#import "UserModel.h"
+
+// common manager
+#import "UserManager.h"
+
+
+#endif
+
+#endif /* PrefixHeader_pch */
