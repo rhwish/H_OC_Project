@@ -7,6 +7,14 @@
 
 #import "UIConfig.h"
 
+#import <UIKit/UIKit.h>
+
 @implementation UIConfig
+
++ (void)config {
+    if (@available(iOS 15.0, *)) {
+        [UITableView appearance].sectionHeaderTopPadding = 0;
+    }
+}
 
 @end

@@ -23,6 +23,10 @@
  */
 
 
+/* 简写 */
+#define NotiCenter [NSNotificationCenter defaultCenter]
+
+
 /*
   布局是否为RTL(阿拉伯布局)
  */

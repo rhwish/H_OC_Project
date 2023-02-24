@@ -7,9 +7,14 @@
 
 #import <Foundation/Foundation.h>
 
+#import <GKNavigationBar/GKNavigationBar.h>
+
 NS_ASSUME_NONNULL_BEGIN
 
+/* 配置GKNavigationBar */
 @interface NavigationConfig : NSObject
+
++ (void)config;
 
 @end
 

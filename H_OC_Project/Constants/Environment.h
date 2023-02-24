@@ -14,5 +14,8 @@
 #define DevelopServer 1
 #define ProductServer 0
 
+/* 是否登录优先 */
+#define LoginFirst 0
+
 
 #endif /* Environment_h */

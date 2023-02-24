@@ -5,3 +5,9 @@
   Created by RHFlower on 2023/2/24.
   
 */
+"l_login" = "登录";
+"l_logout" = "退出";
+"l_push" = "push展示";
+"l_modal" = "模态展示";
+"l_en_language" = "切换为英语";
+"l_zh_language" = "切换为中文";

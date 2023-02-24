@@ -15,17 +15,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    UIButton *logoutBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    logoutBtn.frame = CGRectMake(0, 0, 100, 44);
+    logoutBtn.center = CGPointMake(SCREEN_WIDTH/2.0, SCREEN_HEIGHT/2.0);
+    logoutBtn.backgroundColor = UIColor.systemOrangeColor;
+    [logoutBtn setTitle:H_Language(@"l_logout") forState:UIControlStateNormal];
+    [logoutBtn setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
+    [logoutBtn addTarget:self action:@selector(onLogout) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:logoutBtn];
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - Action
+// logout
+- (void)onLogout {
+    [[UserManager shareInstance] logout];
 }
-*/
 
 @end

@@ -7,6 +7,8 @@
 
 #import "LoginController.h"
 
+#import "HTabBarController.h"
+
 @interface LoginController ()
 
 @end
@@ -15,17 +17,34 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    UIButton *loginBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    loginBtn.frame = CGRectMake(0, 0, 100, 44);
+    loginBtn.center = CGPointMake(SCREEN_WIDTH/2.0, SCREEN_HEIGHT/2.0);
+    loginBtn.backgroundColor = UIColor.systemOrangeColor;
+    [loginBtn setTitle:H_Language(@"l_login") forState:UIControlStateNormal];
+    [loginBtn setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
+    [loginBtn addTarget:self action:@selector(onLogin) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:loginBtn];
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - Action
+// login
+- (void)onLogin {
+    UserModel *user = [[UserModel alloc] init];
+    user.userId = 1;
+    [[UserManager shareInstance] updateUser:user];
+    [HUserDefaults saveObject:@{@"userId": @(1)} forKey:kStorageUserInfoKey];
+    
+    if (LoginFirst) {
+        HTabBarController *tabBarController = [[HTabBarController alloc] init];
+        self.navigationController.viewControllers = @[tabBarController];
+    } else {
+        [self dismissModalVCWithCompletion:nil];
+    }
+    
 }
-*/
+
 
 @end

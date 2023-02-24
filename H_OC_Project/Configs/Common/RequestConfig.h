@@ -9,7 +9,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/* 网络请求抓包代理 */
 @interface RequestConfig : NSObject
+
++ (void)config;
 
 @end
 

@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIView (HView)
 
+@property (strong ,nonatomic, readwrite) id vParam;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -19,10 +19,15 @@
 
 #import "Environment.h" // 环境文件
 
+#import "HBlock.h" // Block
+
 #import "HMacro.h" // 宏文件
 
 #import "HEnum.h" // 枚举文件
 
+#import "HConstant.h"
+
+// 三方
 #import <MyLayout/MyLayout.h> // 布局库
 
 // common model
@@ -30,6 +35,13 @@
 
 // common manager
 #import "UserManager.h"
+
+// Category
+#import "UIView+HView.h"
+#import "UIColor+HColor.h"
+
+// Util
+#import "HUserDefaults.h"
 
 
 #endif

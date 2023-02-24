@@ -19,6 +19,17 @@ NS_ASSUME_NONNULL_BEGIN
 // 检查推送权限
 - (void)checkNotificationAuthorization;
 
+
+#pragma mark - Local Notification
+- (void)pushLocalNotificationWithTitle:(NSString *)title withBody:(NSString *)body;
+
+
+#pragma mark - AppDelegate Noti
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken;
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler;
+
 @end
 
 NS_ASSUME_NONNULL_END

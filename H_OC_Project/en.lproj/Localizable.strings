@@ -5,3 +5,9 @@
   Created by RHFlower on 2023/2/24.
   
 */
+"l_login" = "Login";
+"l_logout" = "Logout";
+"l_push" = "Push";
+"l_modal" = "Modal";
+"l_en_language" = "English";
+"l_zh_language" = "zh-Hans";

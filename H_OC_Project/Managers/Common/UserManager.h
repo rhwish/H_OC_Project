@@ -24,6 +24,18 @@ NS_ASSUME_NONNULL_BEGIN
 // instance
 + (UserManager *)shareInstance;
 
+
+#pragma mark - Update
+// 更新用户信息
+- (void)updateUser:(UserModel *)user;
+
+// 更新用户当前语言
+- (void)updateUserLocale:(NSString *)locale;
+
+
+- (void)logout;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

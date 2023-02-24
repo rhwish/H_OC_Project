@@ -9,7 +9,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/* 不同iOS版本UI调整适配 */
 @interface UIConfig : NSObject
+
++ (void)config;
 
 @end
 

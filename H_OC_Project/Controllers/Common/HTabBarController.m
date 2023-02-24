@@ -7,6 +7,10 @@
 
 #import "HTabBarController.h"
 
+#import "HomeController.h"
+#import "OtherController.h"
+#import "MineController.h"
+
 @interface HTabBarController ()
 
 @end
@@ -15,17 +19,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.tabBar.translucent = NO;
+    self.tabBar.tintColor = [UIColor whiteColor];
+    
+    HomeController *homeVC = [[HomeController alloc] init];
+    homeVC.tabBarItem.title = @"Home";
+    homeVC.tabBarItem.tag = 0;
+    [self addChildViewController:homeVC];
+    
+    OtherController *otherVC = [[OtherController alloc] init];
+    otherVC.tabBarItem.title = @"Other";
+    otherVC.tabBarItem.tag = 1;
+    [self addChildViewController:otherVC];
+    
+    MineController *mineVC = [[MineController alloc] init];
+    mineVC.tabBarItem.title = @"Mine";
+    mineVC.tabBarItem.tag = 2;
+    [self addChildViewController:mineVC];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
+    
 }
-*/
+
+
 
 @end

@@ -30,6 +30,9 @@
 // 多语言
 UIKIT_EXTERN NSString *const kStorageAppLanguageKey;
 
+// 国家-语言
+UIKIT_EXTERN NSString *const kStorageFullLocaleCodeKey;
+
 // 用户信息
 UIKIT_EXTERN NSString *const kStorageUserInfoKey;
 

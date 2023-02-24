@@ -30,6 +30,9 @@
 // 多语言
 NSString *const kStorageAppLanguageKey = @"storage_app_language_key";
 
+// 国家-语言
+NSString *const kStorageFullLocaleCodeKey = @"storage_full_local_code_key";
+
 // 用户信息
 NSString *const kStorageUserInfoKey = @"storage_user_info_key";
 

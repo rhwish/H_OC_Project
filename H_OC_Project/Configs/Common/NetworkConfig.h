@@ -9,7 +9,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/* 配置Network */
 @interface NetworkConfig : NSObject
+
++ (void)config;
 
 @end
 

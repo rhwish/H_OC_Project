@@ -37,11 +37,15 @@
 
 
 #pragma mark - JJExceptionHandle
+/* 处理异常上报 */
 - (void)handleCrashException:(NSString *)exceptionMessage exceptionCategory:(JJExceptionGuardCategory)exceptionCategory extraInfo:(NSDictionary *)info {
     NSMutableDictionary *userInfo = [NSMutableDictionary dictionary];
     NSException *exception = [NSException exceptionWithName:[self getExceptionType:exceptionCategory] reason:exceptionMessage userInfo:userInfo];
 }
 
+- (void)handleCrashException:(nonnull NSString *)exceptionMessage extraInfo:(nullable NSDictionary *)info {
+    
+}
 
 
 // 获取已知的异常类型
